@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<head>
+    <meta charset="UTF-8">
+    <title>おみくじ</title>
+    <link rel="stylesheet" href="my css.css">
+    <meta name=”description” content="普通のおみくじです。内容:大吉、中吉、小吉、吉、末吉、凶、大凶、シークレット">
+</head>
+
+<body>
+    <div class="header">
+        <h2>games by html初心者</h2>
+        <h1>おみくじ ver.4</h1>
+    </div>    
+    
+    <div class="main">
+        <div class="form">
+            <form>
+                <input type="button" value="おみくじを引く" onclick="myRndLink()">
+            </form>
+        </div>
+        
+        <div class="sentence">
+        <p></p>
+        <p class="a1">普通のおみくじです。</p>
+        <p class="a1">内容：大吉、中吉、小吉、吉、末吉、凶、大凶、シークレット</p>
+        <ul>
+            <li><a class="a2" href="https://htmlcsshed.github.io/omikuji/">ver.1</a>はこちら</li>
+            <li><a class="a2" href="https://htmlcsshed.github.io/omikuji2/">ver.2</a>はこちら</li>
+            <li><a class="a2" href="https://htmlcsshed.github.io/omikuji3/">ver.3</a>はこちら</li>
+        </ul>
+
+        <script>
+            myTable = new Array(	
+                "おみくじ１.html",
+                "おみくじ２.html",
+                "おみくじ３.html",
+                "おみくじ４.html",
+                "おみくじ５.html",
+                "おみくじ６.html",
+                "おみくじ７.html",
+                "おみくじ８.html"
+            );
+
+            function myRndLink(){
+                myRnd = Math.floor( Math.random() * myTable.length );	
+                location.href = myTable[myRnd]; 
+            }
+        </script>
+        </div>
+
+        
+    </div>
+</body>
